@@ -11,6 +11,12 @@
                  url: '/',
                  templateUrl: '/templates/main.html',
                  controller: 'MainCtrl as main'
+             })
+         
+            .state('meeting', {
+                 url: '/meeting/:meetingId',
+                 templateUrl: '/templates/meeting.html',
+                 controller: 'MeetingCtrl as meeting'
              });
      }
 

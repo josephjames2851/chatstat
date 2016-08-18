@@ -1,4 +1,4 @@
 <button>Join Session</button>
 <ul>
-   <li ng-repeat="category in main.categoryList">{{ category }}</li>  
+    <li ng-repeat="category in main.categoryList"><a ui-sref="meeting({meetingId: $index + 1})">{{ category.title + " " + category.startTime + "-" + category.endTime }}</a></li>
 </ul>
