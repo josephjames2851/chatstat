@@ -1,7 +1,7 @@
 (function() {
-    function MainCtrl() {
+    function MainCtrl(Room) {
         console.log("Hello from the main controller");
-        this.categoryList = [
+        this.roomList = [
             {
                 title: "General Health",
                 startTime: "9:00am",
@@ -22,5 +22,6 @@
     
     angular
         .module('chatstat')
-        .controller('MainCtrl', MainCtrl);
+        .controller('MainCtrl', ['Room', MainCtrl]);
+        
 })();
