@@ -1,4 +1,8 @@
 <button>Join Session</button>
 <ul>
-    <li ng-repeat="room in main.roomList"><a ui-sref="meeting({meetingId: $index + 1})">{{ room.title + " " + room.startTime + "-" + room.endTime }}</a></li>
+    <li ng-repeat="room in Meetings.meetings">
+        {{ meetings.title + " " + meetings.startTime + "-" + meetings.endTime }}
+    </li>
+    
+<!--    <li ng-repeat="room in main.roomList"><a ui-sref="meeting({meetingId: $index + 1})">{{ room.title + " " + room.startTime + "-" + room.endTime }}</a></li>-->
 </ul>
