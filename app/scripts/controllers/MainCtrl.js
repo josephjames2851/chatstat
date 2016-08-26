@@ -1,6 +1,8 @@
 (function() {
-    function MainCtrl(Room, Meetings) {
+    function MainCtrl($scope, Room, Meetings) {
         console.log("Hello from the main controller");
+        this.room = Room;
+        this.roomList = Room.all;
         
         
 //        this.roomList = [
@@ -24,6 +26,6 @@
     
     angular
         .module('chatstat')
-        .controller('MainCtrl', ['Room', 'Meetings', MainCtrl]);
+        .controller('MainCtrl', ['$scope', 'Room', 'Meetings', MainCtrl]);
         
 })();

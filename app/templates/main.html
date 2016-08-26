@@ -1,8 +1,23 @@
 <button>Join Session</button>
-<ul>
-    <li ng-repeat="room in Meetings.meetings">
-        {{ meetings.title + " " + meetings.startTime + "-" + meetings.endTime }}
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="room in main.roomList">
+        <a ui-sref="meeting({meetingId: room.$id})">{{ room.name }}</a>
     </li>
+    
+    <!--
+    User clicks on link
+    Link triggers meeting state
+    Link passes in the meeting id number
+    Meeting state/controller uses the id to get the room data from the room service
+    Room service makes a request to database to get room data
+    Room service returns the data to the controller
+    Controller displays the data on the view
+    -->
     
 <!--    <li ng-repeat="room in main.roomList"><a ui-sref="meeting({meetingId: $index + 1})">{{ room.title + " " + room.startTime + "-" + room.endTime }}</a></li>-->
 </ul>
+
+<form>
+    <input ng-model="roomName" type="text" placeholder="Room name">
+    <button type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
+</form>
