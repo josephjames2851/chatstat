@@ -1,0 +1,29 @@
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-default .navbar-brand {
+    color: darkred;
+}
+
+.message {
+    margin-top: -1px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    padding: 15px;
+}
+
+.compose-widget {
+    bottom: 0px;
+    position: fixed;
+}
+
+.compose-message-input {
+
+}
+
+.compose-submit-btn {
+    
+}

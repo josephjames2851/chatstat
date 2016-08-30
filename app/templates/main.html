@@ -1,10 +1,26 @@
-<button>Join Session</button>
-<ul class="list-group">
-    <li class="list-group-item" ng-repeat="room in main.roomList">
-        <a ui-sref="meeting({meetingId: room.$id})">{{ room.name }}</a>
-    </li>
-    
-    <!--
+<div class="container">
+    <h3 class="center">Select a meeting to join:</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="room in main.roomList"><a ui-sref="meeting({meetingId: room.$id})">{{ room.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<form>
+    <input ng-model="roomName" type="text" placeholder="Room name">
+    <button type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
+</form>
+
+
+
+
+<!--
     User clicks on link
     Link triggers meeting state
     Link passes in the meeting id number
@@ -15,9 +31,3 @@
     -->
     
 <!--    <li ng-repeat="room in main.roomList"><a ui-sref="meeting({meetingId: $index + 1})">{{ room.title + " " + room.startTime + "-" + room.endTime }}</a></li>-->
-</ul>
-
-<form>
-    <input ng-model="roomName" type="text" placeholder="Room name">
-    <button type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
-</form>

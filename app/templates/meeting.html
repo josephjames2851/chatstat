@@ -1,1 +1,15 @@
-<h1>{{ meeting.room.name }}</h1>
+<div class="container">
+    <div class="row">
+        <h1>{{ meeting.room.name }}</h1>
+        <div class="col-xs-12 message" ng-repeat="message in meeting.messages">
+            <b>{{ message.user }}</b><br/>
+            {{ message.message }}
+        </div>    
+    </div>
+    <form class="form-inline compose-widget" ng-submit="meeting.addMessage()">
+        <div class="form-group">
+            <input type="text" class="compose-message-input form-control" ng-model="meeting.message">
+        </div>
+        <button type="submit" class="btn btn-primary compose-submit-btn">Send</button>  
+    </form>
+</div>
