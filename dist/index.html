@@ -11,22 +11,29 @@
 </head>
     
 <body>
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand logo" href="#">ChatStat</a>
+    <div>
+        <header>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand logo" href="#">ChatStat</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="/">Live</a></li>                
+                    </ul>
                 </div>
-                <ul class="nav navbar-nav">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Schedule</a></li>
-                    <li><a href="/">Live</a></li>                
-                </ul>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
+    </div>
+    
     
     <ui-view></ui-view>
+    
+    <div class="container-fluid">
+        <footer class="footer-main">ChatStat &copy 2016</footer>
+    </div>
     
     <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
     <script>
@@ -49,7 +56,14 @@
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     
+    <!-- UI Router -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+    
+    <!-- UI Bootstrap -->
+    <script src="/scripts/services/uibootstrap.js"></script>
+    
+    <!-- Cookies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-cookies.js"></script>
 
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>

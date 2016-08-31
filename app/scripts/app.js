@@ -21,6 +21,6 @@
      }
 
 angular
-    .module('chatstat', ['ui.router', 'firebase'])
+    .module('chatstat', ['ui.router', 'firebase', 'ngCookies', 'ui.bootstrap'])
     .config(config);
 })();
