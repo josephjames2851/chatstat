@@ -1,18 +1,22 @@
-(function () {
-  function ChatStatCookies($cookies, $uibModal) {
-      var currentUser = $cookies.get('chatStatCurrentUser');
-      
-      if (!currentUser || currentUser === '') {
-          $uibModal.open({
-              templateUrl: '../templates/username-modal.html',
-              controller: 'UsernameCtrl',
-              controllerAs: '$ctrl'
-          })
-      }
-  }
+(function() {
+    function UsernameCtrl($scope, $cookies, Room, Meetings) {
+        console.log("Hello from the username controller");
+        
+        this.setUsername = function() {
+            console.log($scope.username);
+            $cookies.put("chatStatCurrentUser", $scope.username);
+        }
+        
+    }
+    
+    function ModalInstanceCtrl($scope, $cookies, $modalInstance) {
+        $scope.setUsername = function () {
+            $modalInstance.close('username');
+        };
+    }
     
     angular
         .module('chatstat')
-        .run(['$cookies', '$uibModal', ChatStatCookies]);
-    
+        .controller('UsernameCtrl', ['$scope', '$cookies', 'Room', 'Meetings', UsernameCtrl]);
+        
 })();

@@ -16,11 +16,19 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     color: darkred;
 }
 
-.container {
-    min-height: 100%;
-    padding: 0 0 50px;
-    position: relative;
+.page-wrap {
+    min-height: 100vh;
     margin-bottom: -50px;
+}
+
+.page-wrap:after {
+    content: "";
+    display: block;
+}
+
+.footer-main, 
+.page-wrap:after {
+    height: 50px;
 }
 
 .message {
@@ -33,14 +41,16 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 }
 
 .footer-main {
+/*
     bottom: 0;
     left: 0;
-    position: absolute;
+*/
+/*    position: absolute;*/
     width: 100%;
-    margin-top: -50px;
+/*    margin-top: -50px;*/
     color: grey;
     text-align: center;
-    padding: 1em;
+/*    padding: 1em;*/
     background-color: #f8f8f8;
     border: 1px solid #e7e7e7;
 }

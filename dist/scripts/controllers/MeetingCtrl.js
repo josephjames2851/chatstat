@@ -1,5 +1,5 @@
 (function() {
-    function MeetingCtrl(Room, $stateParams, $firebaseArray) {
+    function MeetingCtrl(Room, $stateParams, $firebaseArray, $cookies) {
         this.roomId = $stateParams.meetingId;
 
         var ref = firebase.database().ref().child("messages").orderByChild("roomId").equalTo(this.roomId);
@@ -14,7 +14,7 @@
         
         this.addMessage = function() {
             this.messages.$add({
-                user: "Joe",
+                user: $cookies.get('chatStatCurrentUser'),
                 message: this.message,
                 roomId: this.roomId
             }).then(function() {
@@ -40,5 +40,5 @@
     
     angular
         .module('chatstat')
-        .controller('MeetingCtrl', ['Room', '$stateParams', '$firebaseArray', MeetingCtrl]);
+        .controller('MeetingCtrl', ['Room', '$stateParams', '$firebaseArray', '$cookies', MeetingCtrl]);
 })();
