@@ -10,13 +10,27 @@
     </div>
 </div>
 
-
-
-<form>
-    <input ng-model="roomName" type="text" placeholder="Room name">
-    <button type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
-</form>
-
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <p>Start a new live meeting:</p>
+        </div>
+        <div class="col-sm-9">
+            <form>
+                <input class="start-meeting-input" ng-model="roomName" type="text" placeholder="Room name">
+                <button class="btn-primary start-meeting-btn" type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--
+<div class="create-room">
+    <form>
+        <input ng-model="roomName" type="text" placeholder="Room name">
+        <button type="submit" ng-click="main.room.createRoom(roomName)">Create Room</button>
+    </form>
+</div>
+-->
 
 
 

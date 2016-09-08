@@ -9,7 +9,6 @@
             console.log(name);
         }
         
-        // use the room id to request the room data from the Room service
         this.room = Room.getRoomById($stateParams.meetingId);
         
         this.addMessage = function() {
@@ -21,20 +20,6 @@
                 console.log("it worked!");
                 this.message = "";
             });
-//            this.messages.push({ user: "Joe", message: this.message });
-        
-        }
-        
-//        this.messages = [
-//            {
-//                user: "Kevin",
-//                message: "Hey!"
-//            },
-//            {
-//                user: "Joe",
-//                message: "Hello!"
-//            }
-//        ];
 
     }
     

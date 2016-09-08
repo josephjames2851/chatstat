@@ -6,10 +6,12 @@
             {{ message.message }}
         </div>    
     </div>
-    <form class="form-inline compose-widget" ng-submit="meeting.addMessage()">
-        <div class="form-group">
-            <input type="text" class="compose-message-input form-control" ng-model="meeting.message">
-        </div>
-        <button type="submit" class="btn btn-primary compose-submit-btn">Send</button>  
-    </form>
+</div>
+<div class="container">
+    <div class="row">
+        <form class="compose-message-form" ng-submit="meeting.addMessage()">
+            <input type="text" class="col-md-11 compose-message-input" ng-model="meeting.message">
+            <button type="submit" class="col-md-1 btn-primary compose-submit-btn">Send</button>  
+        </form>
+    </div>
 </div>

@@ -31,6 +31,45 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     height: 50px;
 }
 
+.footer-main {
+    width: 100%;
+    color: grey;
+    text-align: center;
+    padding: 1em;
+    background-color: #f8f8f8;
+    border: 1px solid #e7e7e7;
+}
+
+button {
+    border: none;
+}
+
+.btn-primary {
+    background-color: dodgerblue;
+    color: white;
+    border-bottom: 2px solid blue;
+}
+
+.compose-message-form {
+    padding-top: 1em;
+    padding-bottom: 6em;
+}
+
+.compose-message-input {
+    width: 85%;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    padding: .5em 0;
+    margin: 0 5px;
+}
+
+.compose-submit-btn {
+    width: 10%;
+    padding: .5em 0;
+
+    
+}
+
 .message {
     margin-top: -1px;
     border-top: 1px solid lightgray;
@@ -40,17 +79,6 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
     padding: 15px;
 }
 
-.footer-main {
-/*
-    bottom: 0;
-    left: 0;
-*/
-/*    position: absolute;*/
-    width: 100%;
-/*    margin-top: -50px;*/
-    color: grey;
-    text-align: center;
-/*    padding: 1em;*/
-    background-color: #f8f8f8;
-    border: 1px solid #e7e7e7;
+.start-meeting-input {
+    border: 1px solid gainsboro;
 }
